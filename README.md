@@ -7,3 +7,4 @@ ToDo:
 - styling
 - add other metrics
 - dotenv files
+- add more leagues calls (w input option)

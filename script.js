@@ -18,7 +18,7 @@ if(mm<10)
 
 opener.prepend(`As of ${dd}-${mm}-${yyyy}, the top scorers in the English Premier League are:`)
 
-axios.get('http://api.football-data.org/v2/competitions/PL/scorers', {
+axios.get('https://api.football-data.org/v2/competitions/PL/scorers', {
   headers: {
     'X-Auth-Token': '45c7f8afedda475190873423e4ae4045'
   }
