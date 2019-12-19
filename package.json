@@ -1,0 +1,22 @@
+{
+  "name": "football-data",
+  "version": "1.0.0",
+  "description": "Uses the football data API to display up to date information about top Premier League\r scorers.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomNPython/TopScorers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomNPython/TopScorers/issues"
+  },
+  "homepage": "https://github.com/TomNPython/TopScorers#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

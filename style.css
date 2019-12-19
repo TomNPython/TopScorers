@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background: rgb(223, 223, 223)
+}
+
+ol {
+    max-width: 300px;
+    margin: 10px auto
+}
+
+ol li {
+    padding: 5px
+}
+
+ol li:nth-child(1) {
+    color: rgb(207, 177, 4)
+}
+
+ol li:nth-child(2) {
+    color: rgb(155, 154, 154)
+}
+
+ol li:nth-child(3) {
+    color: brown
+}
