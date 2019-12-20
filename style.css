@@ -5,7 +5,7 @@ body {
 
 ol {
     max-width: 300px;
-    margin: 10px auto
+    margin: 10px auto;
 }
 
 ol li {
@@ -13,13 +13,17 @@ ol li {
 }
 
 ol li:nth-child(1) {
-    color: rgb(207, 177, 4)
+    color: rgb(207, 177, 4);
+    font-weight: bold;
 }
 
 ol li:nth-child(2) {
-    color: rgb(155, 154, 154)
+    color: rgb(155, 154, 154);
+    font-weight: bold;
 }
 
 ol li:nth-child(3) {
-    color: brown
+    color: brown;
+    font-weight: bold;
+    border-bottom: 2px dotted white
 }
