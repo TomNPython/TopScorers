@@ -1,5 +1,4 @@
 const listOfScorers = document.getElementById('scorers')
-const opener = document.getElementById('opener')
 
 var today = new Date();
 var dd = today.getDate();
@@ -16,24 +15,47 @@ if(mm<10)
     mm='0'+mm;
 } 
 
-opener.prepend(`As of ${dd}-${mm}-${yyyy}, the top scorers in the English Premier League are:`)
+//opener.prepend(`As of ${dd}-${mm}-${yyyy}, the top scorers in the ${res.data.competition.name}:`)
+
+function listScorers(res) {
+      let containerDiv = document.createElement('div')
+      let opener = document.createElement('p');
+      listOfScorers.append(containerDiv)
+      containerDiv.append(opener)
+      opener.append(`As of ${dd}-${mm}-${yyyy}, 
+      the top scorers in the ${res.data.competition.name} are:`)
+      
+      const scorers = Array.from(res.data.scorers)
+      let entries = document.createElement('ol')
+      
+      scorers.forEach(scorer => {
+        let entry = document.createElement('li')
+        entry.append(`${scorer.player.name} (${scorer.team.name}) - ${scorer.numberOfGoals}`)
+        entries.append(entry)
+        
+      })
+      containerDiv.append(entries)
+}
 
 axios.get('https://api.football-data.org/v2/competitions/PL/scorers', {
-  headers: {
-    'X-Auth-Token': '45c7f8afedda475190873423e4ae4045'
-  }
-})
-  .then(res => { 
-    console.log(res.data.scorers)
-    const scorers = Array.from(res.data.scorers)
-
-    scorers.forEach(scorer => {
-      let entry = document.createElement('li')
-      entry.append(`${scorer.player.name} (${scorer.team.name}) - ${scorer.numberOfGoals}`)
-      listOfScorers.append(entry)
+      headers: {
+        'X-Auth-Token': '45c7f8afedda475190873423e4ae4045'
+      }
     })
-  })
-  .catch(err => console.log(err))
+    .then(res => 
+      listScorers(res)
+    )
+    .catch(err => console.log(err))
+
+    axios.get('https://api.football-data.org/v2/competitions/ELC/scorers', {
+    headers: {
+      'X-Auth-Token': '45c7f8afedda475190873423e4ae4045'
+    }}
+    )
+    .then(res => 
+      listScorers(res)
+      )
+    .catch(err => console.log(err))
 
 
 /* CONVERTED AJAX CALL TO AXIOS FOR CONVENIENCE

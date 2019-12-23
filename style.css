@@ -3,10 +3,7 @@ body {
     background: rgb(223, 223, 223)
 }
 
-ol {
-    max-width: 300px;
-    margin: 10px auto;
-}
+
 
 ol li {
     padding: 5px
@@ -15,15 +12,32 @@ ol li {
 ol li:nth-child(1) {
     color: rgb(207, 177, 4);
     font-weight: bold;
+    font-size: 24px
 }
 
 ol li:nth-child(2) {
     color: rgb(155, 154, 154);
     font-weight: bold;
+    font-size: 20px
 }
 
 ol li:nth-child(3) {
     color: brown;
     font-weight: bold;
+    font-size: 18px;
     border-bottom: 2px dotted white
+}
+
+
+#scorers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+#scorers ol {
+    margin-bottom: 10px;
+    border: 3px solid grey;
+    border-radius: 5px;
 }
