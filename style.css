@@ -1,12 +1,12 @@
 body {
     text-align: center;
-    background: rgb(223, 223, 223)
+    background: rgb(241, 241, 241);
+    margin: 0 auto;
+    padding: 0
 }
 
-
-
 ol li {
-    padding: 5px
+    padding: 10px
 }
 
 ol li:nth-child(1) {
@@ -33,6 +33,7 @@ ol li:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 0 auto
 }
 
 

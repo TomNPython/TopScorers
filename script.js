@@ -47,7 +47,7 @@ axios.get('https://api.football-data.org/v2/competitions/PL/scorers', {
     )
     .catch(err => console.log(err))
 
-    axios.get('https://api.football-data.org/v2/competitions/ELC/scorers', {
+axios.get('https://api.football-data.org/v2/competitions/ELC/scorers', {
     headers: {
       'X-Auth-Token': '45c7f8afedda475190873423e4ae4045'
     }}
